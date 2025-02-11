@@ -66,16 +66,22 @@ export function NewItem() {
         <option value="dairy">Dairy</option>
         <option value="bakery">Bakery</option>
         <option value="meat">Meat</option>
+        <option value="frozen foods">Frozen Foods</option>
         <option value="canned goods">Canned Goods</option>
         <option value="dry goods">Dry Goods</option>
+        <option value="beverages">Beverages</option>
+        <option value="snacks">Snacks</option>
         <option value="household">Household</option>
+        <option value="other">Other</option>
+
+       
       </select>
       <label
         htmlFor="quantity"
         className="flex flex-row gap-2 bg-slate-50 p-2 rounded-lg items-center border-2"
       >
         <input
-          id="quntity"
+          id="quantity"
           value={quantity}
           onChange={handleQuantityChange}
           className="px-2 text-gray-500"
