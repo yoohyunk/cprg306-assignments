@@ -61,7 +61,6 @@ export function NewItem() {
         onChange={handleCategoryChange}
         required
         className="p-2 border-2 rounded-lg"
-        // "Produce", "Dairy", "Bakery", "Meat", "Frozen Foods", "Canned Goods", "Dry Goods", "Beverages", "Snacks", "Household", "Other"
       >
         <option value="produce">Produce</option>
         <option value="dairy">Dairy</option>
@@ -74,6 +73,8 @@ export function NewItem() {
         <option value="snacks">Snacks</option>
         <option value="household">Household</option>
         <option value="other">Other</option>
+
+       
       </select>
       <label
         htmlFor="quantity"
