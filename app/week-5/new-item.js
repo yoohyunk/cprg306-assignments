@@ -6,8 +6,8 @@ export function NewItem() {
   const [name, setname] = useState("");
   const [category, setCategory] = useState("produce");
 
-  const increment = () => (quantity < 20 ? setQuantity(quantity + 1) : null);
-  const decrement = () => (quantity > 1 ? setQuantity(quantity - 1) : null);
+  const increment = () => setQuantity(quantity + 1);
+  const decrement = () => setQuantity(quantity - 1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -73,8 +73,6 @@ export function NewItem() {
         <option value="snacks">Snacks</option>
         <option value="household">Household</option>
         <option value="other">Other</option>
-
-       
       </select>
       <label
         htmlFor="quantity"
@@ -90,14 +88,16 @@ export function NewItem() {
           <button
             type="button"
             onClick={increment}
-            className="rounded-md bg-gray-500 w-8 py-1 text-center hover:bg-gray-600"
+            disabled={quantity >= 20}
+            className="rounded-md bg-gray-500 w-8 py-1 text-center hover:bg-gray-600 disabled:hover:bg-gray-500"
           >
             +
           </button>
           <button
             type="button"
             onClick={decrement}
-            className="rounded-md bg-gray-500 w-8 py-1 text-center  hover:bg-gray-600"
+            disabled={quantity <= 1}
+            className="rounded-md bg-gray-500 w-8 py-1 text-center  hover:bg-gray-600  disabled:hover:bg-gray-500"
           >
             -
           </button>
