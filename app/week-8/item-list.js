@@ -3,12 +3,11 @@
 import { Item } from "./item";
 import { useState } from "react";
 
-export function ItemList({ items }) {
+export function ItemList({ items, onItemSelect }) {
   const [sortBy, setSortBy] = useState("name");
 
   return (
-
-    <div className="flex flex-col  width-full gap-4  ">
+    <div className="flex flex-col w-full gap-4">
       <div className="flex gap-1 justify-end px-4">
         <button
           onClick={() => setSortBy("name")}
@@ -35,7 +34,7 @@ export function ItemList({ items }) {
           Sort by Category
         </button>
       </div>
-      <div className="flex flex-col gap-2 width-full">
+      <div className="flex flex-col gap-2 w-full">
         {items
           .sort((a, b) => {
             if (sortBy === "name") {
@@ -52,6 +51,7 @@ export function ItemList({ items }) {
               name={item.name}
               category={item.category}
               quantity={item.quantity}
+              onSelect={() => onItemSelect(item)}
             />
           ))}
       </div>
