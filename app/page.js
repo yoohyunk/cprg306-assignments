@@ -51,7 +51,12 @@ export default function Home() {
         >
           week8
         </Link>
-
+        <Link
+          href="/week-9"
+          className="hover:text-violet-600 active:text-violet-700"
+        >
+          week9
+        </Link>
       </div>
     </div>
   );
